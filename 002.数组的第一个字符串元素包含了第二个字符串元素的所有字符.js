@@ -52,8 +52,8 @@ function include(arr) {
   	var str2 = arr[1].toLowerCase();
     var newArr = [];
     
-    // map()返回的是一个数组，所以这里可以这样写
-    newArr = Array.prototype.map.call(str2, function(ev) {
+    // filter()返回的是一个数组，所以这里可以这样写
+    newArr = Array.prototype.filter.call(str2, function(ev) {
         return str1.indexOf(ev) > -1;
     })
     
@@ -69,8 +69,8 @@ function include(arr) {
   	var str2 = arr[1].toLowerCase();
     var newArr = [];
     
-    // map()返回的是一个数组，所以这里可以这样写
-    Array.prototype.map.call(str2, function(ev) {
+    
+    Array.prototype.forEach.call(str2, function(ev) {
         return newArr.push(str1.indexOf(ev));
     })
     
